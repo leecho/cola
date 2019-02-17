@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>系统错误</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.2/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12" style="margin-top: 100px">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3 class="panel-title">Error</h3></div>
+                <div class="panel-body">
+                    <p>Timestamp：<span th:text="${#dates.format(timestamp,'yyyy-MM-dd HH:mm:ss')}"></span></p>
+                    <p>Message: <span th:text="${message}"></span></p>
+                    <p>Error: <span th:text="${error}"></span></p>
+                    <p>Path: <span th:text="${path}"></span></p>
+                    <p>Trace: <pre th:text="${trace}"></pre></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>cola</artifactId>
+        <groupId>com.honvay</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cola-auth</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>cola-auth-base</module>
+        <module>cola-auth-oauth2</module>
+        <module>cola-auth-social</module>
+        <module>cola-auth-core</module>
+        <module>cola-auth-client</module>
+        <module>cola-auth-sms</module>
+        <module>cola-auth-openid</module>
+        <module>cola-auth-web</module>
+        <module>cola-auth-jwt</module>
+        <module>cola-auth-captcha</module>
+        <module>cola-auth-ac</module>
+        <module>cola-auth-channel</module>
+    </modules>
+
+
+</project>

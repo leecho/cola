@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>用户中心</title>
+    <link rel="stylesheet" href="webjars/bootstrap/3.3.2/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <h1 class="page-header">应用</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <span th:text="${user}"></span>&nbsp;&nbsp;
+            <span sec:authorize="isAuthenticated()" style="display: inline-block;">
+                <a th:href="@{/updatePassword}">用户中心</a> &nbsp;&nbsp; <a th:href="@{/logout}">注销</a>
+            </span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

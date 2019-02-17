@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>用户中心</title>
+    <link rel="stylesheet" href="webjars/bootstrap/3.3.2/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <h1 class="page-header">用户中心</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <span th:text="${name}"></span>&nbsp;&nbsp;
+            <span sec:authorize="isAuthenticated()" style="display: inline-block;">
+                <a th:href="@{/updatePassword}">修改密码</a> &nbsp;&nbsp; <a th:href="@{/logout}">注销</a>
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Connections</h2>
+            <table class="table table-bordered">
+                <tr>
+                    <th>Provider</th>
+                    <th>Connected</th>
+                    <th>DisplayName</th>
+                    <th>Options</th>
+                </tr>
+                <tr th:each="conn : ${connections}">
+                    <td th:text="${conn.provider}"></td>
+                    <td th:text="${conn.connected}"></td>
+                    <td th:text="${conn.displayName}"></td>
+                    <td th:if="${!conn.connected}">
+                        <form th:action="'/connect/'+ ${conn.provider}" method="POST">
+                            <button type="submit" class="btn btn-default btn-xs">
+                                Connect
+                            </button>
+                        </form>
+                    </td>
+                    <td th:if="${conn.connected}">
+                        <form th:action="'/connect/'+ ${conn.provider}" method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="btn btn-default btn-xs">
+                                Disconnect
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

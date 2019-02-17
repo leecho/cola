@@ -1,0 +1,14 @@
+server:
+  port: 8081
+security:
+  oauth2:
+    client:
+      client-id: controller
+      client-secret: user
+      access-token-uri: https://www.honvay.com/oauth/token
+      user-authorization-uri: https://www.honvay.com/oauth/authorize
+    resource:
+      user-info-uri: https://www.honvay.com/api/userinfo
+spring:
+  thymeleaf:
+    cache: false

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>cola-samples</artifactId>
+        <groupId>com.honvay</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cola-sample-oauth2</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.honvay</groupId>
+            <artifactId>cola-auth-base</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.honvay</groupId>
+            <artifactId>cola-auth-oauth2-base</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.10</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.honvay</groupId>
+            <artifactId>cola-notify-provider</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.honvay</groupId>
+            <artifactId>cola-user-provider</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

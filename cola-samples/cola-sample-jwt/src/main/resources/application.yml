@@ -1,0 +1,28 @@
+spring:
+  messages:
+    basename: org/springframework/security/messages
+  thymeleaf:
+    cache: false
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cola-auth?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root
+    initialization-mode: always
+  jpa:
+    hibernate:
+      ddl-auto: none
+  social:
+    qq:
+      app-id: id
+      app-secret: secret
+    wechat:
+      app-id: id
+      app-secret: secret
+security:
+  jwt:
+    signing-key: cola
+logging:
+  level:
+    org.springframework.web: debug
+    com.honvay: debug

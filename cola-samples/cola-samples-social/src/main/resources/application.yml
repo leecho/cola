@@ -1,0 +1,52 @@
+spring:
+  messages:
+    basename: spring,org/springframework/security/messages
+  thymeleaf:
+    cache: false
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cola-auth?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root
+    initialization-mode: always
+  jpa:
+    hibernate:
+      ddl-auto: none
+  social:
+    login-process-url: /social
+    signup-process-url: /social/signup
+    signup-url: https://www.honvay.com/social/signup #需要指向本地，自行配置
+    qq:
+      app-id: id
+      app-secret: secret
+    wechat:
+      app-id: id
+      app-secret: secret
+    wechatmp:
+      app-id: id
+      app-secret: secret
+    alipay:
+      app-id: id
+      app-secret: secret
+      signType: RSA
+      private-key: pk
+      public-key: pk
+    sms:
+      login-process-url: /loginBySms
+security:
+  oauth2:
+    resource:
+      id: auth-controller
+server:
+  error:
+    include-stacktrace: always
+  port: 8081
+cola:
+  sms:
+    type: aliyun
+  aliyun:
+    accessKeyId: 123
+    accessKeySecret : 1231
+logging:
+  level:
+    org.springframework.web: debug

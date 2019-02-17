@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>微信绑定成功</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.2/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12" style="margin-top: 200px">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3 class="panel-title">绑定微信成功</h3></div>
+                <div class="panel-body">
+                    <p>微信已绑定，3秒后跳转到主页</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    setTimeout(function () {
+        window.location.href = "/";
+    },3000)
+</script>
+</body>
+</html>

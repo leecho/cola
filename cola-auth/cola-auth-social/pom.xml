@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.honvay</groupId>
+        <artifactId>cola-auth</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>cola-auth-social</artifactId>
+    <modules>
+        <module>cola-auth-social-qq</module>
+        <module>cola-auth-social-wechat</module>
+        <module>cola-auth-social-alipay</module>
+        <module>cola-auth-social-web</module>
+        <module>cola-auth-social-wechatmp</module>
+        <module>cola-auth-social-base</module>
+    </modules>
+    <packaging>pom</packaging>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.social</groupId>
+                <artifactId>spring-social-autoconfigure</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.social</groupId>
+                <artifactId>spring-social-security</artifactId>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
