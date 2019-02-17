@@ -27,8 +27,10 @@ Cola是一个互联网项目基础平台，着重解决基于SpringBoot+SpringSe
 - 通过第三方AuthorizationCode获取Token
 
 ## 实例项目
-- cola-sample-jwt 基于Jwt进行无Session认证，适用于APP和小程序
-- cola-sample-oauth2 基于OAuth2进行无Session认证，适用于APP和小程序，也可以作为开放平台和微服务平台的认证服务
-- cola-sample-sso 基于OAuth2构建SSO服务
-- cola-sample-web 基于WebSession认证
-- cola-sample-social 基于SpringSocial集成第三方登录(需要配置第三方APPID和APPSECRET)
+| 项目 | 认证模式 | 适用场景 |
+| ------ | ------ | ------ |
+| cola-sample-jwt | JWT |APP/小程序 |
+| cola-sample-oauth2 | OAuth2 |  APP/小程序/开放平台和微服务平台的认证服务 |
+| cola-sample-sso | Session&OAuth2 | Web应用/APP/小程序集成认证 |
+| cola-sample-web | Session | Web应用 |
+| cola-sample-social | Session | Web应用/SSO服务 |
