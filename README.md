@@ -1,6 +1,6 @@
 # Cola 
 ## 简介
-Cola是一个互联网应用基础组件，基于SpringBoot2/SpringSecurity/SpringSession/SpringSocial/SpringSecurityOAuth2构建，着重于解决互联网应用分布式集群场景下身份验证，并提供丰富的认证方式和社会化认证集成。也包含其他支撑系统，例如：用户中心、安全中心、通知中心。能够满足所有互联网应用的所有认证需求，并通过基础组件来支撑互联网应用快速开发。
+Cola是一个互联网应用基础组件，基于SpringBoot2/SpringSecurity/SpringSession/SpringSocial/SpringSecurityOAuth2构建，着重于解决互联网应用分布式集群场景下的身份认证，并提供丰富的认证方式和社会化认证集成。也包含其他支撑系统，例如：用户中心、安全中心、通知中心。能够满足所有互联网应用的所有认证需求，并通过基础组件来支撑互联网应用快速开发。
 
 ## 组件列表
 | 组件代码 | 组件名称 | 说明 |
